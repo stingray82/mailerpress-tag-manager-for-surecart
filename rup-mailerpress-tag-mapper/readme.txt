@@ -2,7 +2,7 @@
 Tags: SureCart, Mailerpress, tags
 Requires at least: 6.5
 Tested up to: 7.1.3
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 Requires PHP: 8.0
 
 Automatically add MailerPress Tags on SureCart Purchases
@@ -18,6 +18,9 @@ Automatically add MailerPress Tags on SureCart Purchases
 == Frequently Asked Questions ==
 
 == Changelog ==
+= 1.1.4 18 October 2026 =
+* [Experimental] First Update Test
+
 = 1.1.3 18 October 2026 =
 * [New] Add Automatic Update Support using UUPD
 

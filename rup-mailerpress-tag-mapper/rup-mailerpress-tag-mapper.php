@@ -5,7 +5,7 @@
  * Tested up to:      7.1.3
  * Requires at least: 6.5
  * Requires PHP:      8.0
- * Version:           1.1.3
+ * Version:           1.1.4
  * Author:            Reallyusefulplugins.com
  * Author URI:        https://reallyusefulplugins.com
  * License:           GPL3
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'RUP_MP_TM_OPTION_ENABLED', 'rup_mp_tm_enabled' );
 define( 'RUP_MP_TM_OPTION_MAPPINGS', 'rup_mp_tm_mappings' );
 define( 'RUP_MP_TM_OPTION_GLOBAL_DOUBLE_OPTIN', 'rup_mp_tm_global_double_optin' );
-define('RUP_MP_TM_VERSION', '1.1.3');
+define('RUP_MP_TM_VERSION', '1.1.4');
 define( 'RUP_MP_TM_PLUGIN_FILE', __FILE__ );
 define( 'RUP_MP_TM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
