@@ -1,0 +1,26 @@
+{
+    "slug": "rup-mailerpress-tag-mapper",
+    "name": "MailerPress Tag Manager for SureCart",
+    "version": "1.1.3",
+    "author": "Reallyusefulplugins.com",
+    "author_homepage": "https://reallyusefulplugins.com",
+    "requires_php": "8.0",
+    "requires": "6.5",
+    "tested": "7.1.3",
+    "sections": {
+        "description": "Automatically add MailerPress Tags on SureCart Purchases",
+        "installation": "1. Upload the `rup-mailerpress-tag-mappe` folder to the `/wp-content/plugins/` directory.<br />\n2. Activate the plugin through the 'Plugins' menu in WordPress.<br />\n3. Configure the plugin settings it is located in the SureCart menu",
+        "frequently_asked_questions": "",
+        "changelog": "<h4>1.1.3 18 October 2026</h4><ul><li>* [New] Add Automatic Update Support using UUPD</li></ul><h4>1.1.2 17 October 2026</h4><ul><li>* [Fixed] Removed the unwanted blank New mapping row created when opening the mapper</li><li>* [Improved] Add Mapping buttons now create an expanded row only when requested</li><li>* [Improved] Automatically scroll to a new mapping and focus its product selector</li><li>* [Fixed] Clear active search and filters when adding a mapping so it remains visible</li><li>* [Fixed] Prevent unsaved mapping row indices from colliding after deletion</li></ul><h4>1.1.1 16 October 2026</h4><ul><li>* [Fixed] Restored vertical scrolling on the CRM Tag Mapper admin screen with page-scoped overflow rules</li><li>* [Improved] Retained the compact mapping interface without restricting the page height</li></ul><h4>1.1.0 15 October 2026</h4><ul><li>* [Improved] Existing product and price mappings now start collapsed for easier navigation</li><li>* [New] Compact mapping summaries show product, price or version, selected MailerPress tags and mapping status</li><li>* [Improved] Expand individual mappings to edit their settings</li><li>* [Improved] New mapping forms open expanded while existing mappings remain collapsed</li></ul><h4>1.0.0 15 October 2026</h4><ul><li>* [New] Initial MailerPress integration for the SureCart CRM Tag Mapper</li><li>* [New] Map SureCart products or individual prices to multiple MailerPress tags</li><li>* [New] Automatically apply mapped tags following supported SureCart purchase events</li><li>* [New] WordPress admin interface for managing and enabling product and price mappings</li><li>* [New] Global and per-mapping double opt-in settings for new contacts</li><li>* [Improved] Preserve existing MailerPress subscription statuses and previously assigned tags</li><li>* [Info] New contacts created through purchase tagging are not automatically treated as subscribed without confirmation</li></ul>"
+    },
+    "last_updated": "2026-10-18 14:47:14",
+    "download_url": "https://github.com/stingray82/mailerpress-tag-manager-for-surecart/releases/latest/download/rup-mailerpress-tag-mapper.zip",
+    "banners": {
+        "low": "https://raw.githubusercontent.com/stingray82/mailerpress-tag-manager-for-surecart/main/uupd/banner-772x250.png",
+        "high": "https://raw.githubusercontent.com/stingray82/mailerpress-tag-manager-for-surecart/main/uupd/banner-1544x500.png"
+    },
+    "icons": {
+        "1x": "https://raw.githubusercontent.com/stingray82/mailerpress-tag-manager-for-surecart/main/uupd/icon-128.png",
+        "2x": "https://raw.githubusercontent.com/stingray82/mailerpress-tag-manager-for-surecart/main/uupd/icon-256.png"
+    }
+}

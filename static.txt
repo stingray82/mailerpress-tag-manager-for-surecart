@@ -1,0 +1,11 @@
+Automatically add MailerPress Tags on SureCart Purchases
+== Description ==
+
+Automatically add MailerPress Tags on SureCart Purchases
+== Installation ==
+
+1. Upload the `rup-mailerpress-tag-mappe` folder to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Configure the plugin settings it is located in the SureCart menu
+
+== Frequently Asked Questions ==

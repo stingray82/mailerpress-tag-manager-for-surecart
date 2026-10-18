@@ -2,14 +2,14 @@
 /**
  * Plugin Name:       MailerPress Tag Manager for SureCart
  * Description:       Map SureCart products and prices to MailerPress contact tags on purchase.
- * Tested up to:      6.9.4
+ * Tested up to:      7.1.3
  * Requires at least: 6.5
  * Requires PHP:      8.0
- * Version:           1.1.2
+ * Version:           1.1.3
  * Author:            Reallyusefulplugins.com
  * Author URI:        https://reallyusefulplugins.com
- * License:           GPL2
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * License:           GPL3
+ * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       rup-mailerpress-tag-mapper
  * Website:           https://reallyusefulplugins.com
  */
@@ -21,7 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'RUP_MP_TM_OPTION_ENABLED', 'rup_mp_tm_enabled' );
 define( 'RUP_MP_TM_OPTION_MAPPINGS', 'rup_mp_tm_mappings' );
 define( 'RUP_MP_TM_OPTION_GLOBAL_DOUBLE_OPTIN', 'rup_mp_tm_global_double_optin' );
-define( 'RUP_MP_TM_VERSION', '1.1.2' );
+define('RUP_MP_TM_VERSION', '1.1.3');
+define( 'RUP_MP_TM_PLUGIN_FILE', __FILE__ );
+define( 'RUP_MP_TM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 /**
  * Basic debug logger.
@@ -1415,3 +1417,32 @@ function rup_mp_tm_apply_purchase( $checkout ) {
 }
 add_action('surecart/checkout_confirmed', 'rup_mp_tm_apply_purchase', 10, 1);
 add_action('surelywp_tk_lm_on_new_order_create', 'rup_mp_tm_apply_purchase', 10, 1);
+
+// ──────────────────────────────────────────────────────────────────────────
+// Updater bootstrap
+// ──────────────────────────────────────────────────────────────────────────
+add_action(
+    'plugins_loaded',
+    function() {
+        $updater_file = RUP_MP_TM_PLUGIN_DIR . 'inc/updater.php';
+
+        if ( ! file_exists( $updater_file ) ) {
+            return;
+        }
+
+        require_once $updater_file;
+
+        $updater_config = array(
+            'vendor'      => 'rup',
+            'plugin_file' => plugin_basename( RUP_MP_TM_PLUGIN_FILE ),
+            'slug'        => 'rup-mailerpress-tag-mapper',
+            'name'        => 'rup mailpress tag mapper',
+            'version'     => RUP_MP_TM_VERSION,
+            'key'         => '',
+            'server'      => 'https://raw.githubusercontent.com/stingray82/mailerpress-tag-manager-for-surecart/main/uupd/index.json',
+        );
+
+        \RUP\Updater\Updater_V2::register( $updater_config );
+    },
+    20
+);
